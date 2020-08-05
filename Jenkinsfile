@@ -1,11 +1,20 @@
 pipeline {
   agent any
   stages {
-    stage('echo') {
+    stage('clone') {
       steps {
-        echo '"Hello world"'
+        echo '"Hello Everyone"'
       }
     }
-
+  stage('build') {
+      steps {
+        echo '"we are building new world"'
+      }
+    }
+  stage('postbuild') {
+      steps {
+        echo '"Goodbye"'
+      }
+    }
   }
 }
